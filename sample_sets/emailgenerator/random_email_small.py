@@ -10,16 +10,17 @@ def getRandomSet(bits):
     return value_set
 
 if __name__ == '__main__':
-    alice_file = "../emails_alice.txt"
-    bob_file = "../emails_bob.txt"
+    alice_file = "../emails_alice1.txt"
+    bob_file = "../emails_bob1.txt"
     filea = open(alice_file, mode='w+')
     fileb = open(bob_file, mode='w+')
-    N  = 8000000
+    N  = 2000000
     count = 0
     while count < N:
         random_str = getRandomSet(20)
-        random_str_bob = random_str + "bob"
-        filea.write(random_str)
+        random_str_bob = random_str + "bob\n"
+        random_str_alice = random_str + "\n"
+        filea.write(random_str_alice)
         fileb.write(random_str_bob)
         count = count + 1
     print("random email ok.")
