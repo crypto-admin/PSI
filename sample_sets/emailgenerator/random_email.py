@@ -18,8 +18,9 @@ if __name__ == '__main__':
     count = 0
     while count < N:
         random_str = getRandomSet(20)
-        random_str_bob = random_str + "bob"
-        filea.write(random_str)
+        random_str_bob = random_str + "bob\n"
+        random_str_alice = random_str + "\n"
+        filea.write(random_str_alice)
         fileb.write(random_str_bob)
         count = count + 1
     print("random email ok.")
